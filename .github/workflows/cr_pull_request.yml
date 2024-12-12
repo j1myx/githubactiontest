@@ -16,3 +16,4 @@ jobs:
         with:
           origin_branch: ${{ github.event.pull_request.head.ref }}
           destination_branch: ${{ github.event.pull_request.base.ref }}
+          metric: 'm0'
