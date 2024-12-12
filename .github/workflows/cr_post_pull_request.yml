@@ -18,3 +18,4 @@ jobs:
         uses: j1myx/githubactionbase@main
         with:
           pull_request_id: ${{ github.event.inputs.pull_request_id }}
+          metric: 'm0'
