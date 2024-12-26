@@ -53,6 +53,7 @@ jobs:
           destination_branch: ${{ github.event.pull_request.base.ref }}
           metric: 'm3'
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          m1: ${{ needs.m1.outputs.record }}
   m4:
     name: M4 - Observación de Pull Request
     runs-on: ubuntu-latest
