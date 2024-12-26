@@ -16,3 +16,64 @@ jobs:
         with:
           origin_branch: ${{ github.event.pull_request.head.ref }}
           destination_branch: ${{ github.event.pull_request.base.ref }}
+          metric: 'm0'
+  m1:
+    name: M1 - Manejo de commits
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: M1
+        id: m1
+        uses: j1myx/githubactionbase@main
+        with:
+          origin_branch: ${{ github.event.pull_request.head.ref }}
+          destination_branch: ${{ github.event.pull_request.base.ref }}
+          metric: 'm1'
+  m2:
+    name: M2 - Creación de PR
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: M2
+        id: m2
+        uses: j1myx/githubactionbase@main
+        with:
+          origin_branch: ${{ github.event.pull_request.head.ref }}
+          destination_branch: ${{ github.event.pull_request.base.ref }}
+          metric: 'm2'
+  m3:
+    name: M3 - Revisión de Pull Request
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: M3
+        id: m3
+        uses: j1myx/githubactionbase@main
+        with:
+          origin_branch: ${{ github.event.pull_request.head.ref }}
+          destination_branch: ${{ github.event.pull_request.base.ref }}
+          metric: 'm3'
+  m4:
+    name: M4 - Observación de Pull Request
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: M4
+        id: m4
+        uses: j1myx/githubactionbase@main
+        with:
+          origin_branch: ${{ github.event.pull_request.head.ref }}
+          destination_branch: ${{ github.event.pull_request.base.ref }}
+          metric: 'm4'
+  m5:
+    name: M5 - Observación de Pull Request
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: M5
+        id: m5
+        uses: j1myx/githubactionbase@main
+        with:
+          origin_branch: ${{ github.event.pull_request.head.ref }}
+          destination_branch: ${{ github.event.pull_request.base.ref }}
+          metric: 'm5'

@@ -1,0 +1,32 @@
+name: Code Review - Cron Job
+on:
+  schedule:
+    - cron: '0 9 * * *' # Every day at 9am
+    - cron: '* * * * *' # Every hour
+
+env:
+  WEBHOOK_URL: ''
+
+jobs:
+  m3:
+    name: M3.2 - Revisión de Pull Request / Tiempo de cierre de PR
+    runs-on: ubuntu-latest
+    if: github.event.schedule == '* * * * *'
+    steps:
+      - uses: actions/checkout@v4
+      - name: M3
+        uses: j1myx/githubactionbase@main
+        with:
+          metric: 'm3.2'
+          webhook_url: ${{env.WEBHOOK_URL}}
+  m5:
+    name: M5 - PR Abierto más de 5 días
+    runs-on: ubuntu-latest
+    if: github.event.schedule == '0 9 * * *'
+    steps:
+      - uses: actions/checkout@v4
+      - name: M5
+        uses: j1myx/githubactionbase@main
+        with:
+          metric: 'm5'
+          webhook_url: ${{env.WEBHOOK_URL}}
