@@ -17,7 +17,7 @@ jobs:
       - name: M3
         uses: j1myx/githubactionbase@main
         with:
-          metric: 'm3.2'
+          metric: 'm3'
           webhook_url: ${{env.WEBHOOK_URL}}
           github_token: ${{ secrets.GITHUB_TOKEN }}
   m5:
