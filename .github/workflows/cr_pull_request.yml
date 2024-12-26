@@ -44,6 +44,7 @@ jobs:
   m3:
     name: M3 - Revisión de Pull Request
     runs-on: ubuntu-latest
+    needs: [m1]
     steps:
       - uses: actions/checkout@v4
       - name: M3
