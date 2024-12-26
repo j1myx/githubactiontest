@@ -19,6 +19,7 @@ jobs:
         with:
           metric: 'm3.2'
           webhook_url: ${{env.WEBHOOK_URL}}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
   m5:
     name: M5 - PR Abierto más de 5 días
     runs-on: ubuntu-latest
@@ -30,3 +31,4 @@ jobs:
         with:
           metric: 'm5'
           webhook_url: ${{env.WEBHOOK_URL}}
+          github_token: ${{ secrets.GITHUB_TOKEN }}

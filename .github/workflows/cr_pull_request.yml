@@ -14,9 +14,9 @@ jobs:
         id: m0
         uses: j1myx/githubactionbase@main
         with:
-          origin_branch: ${{ github.event.pull_request.head.ref }}
           destination_branch: ${{ github.event.pull_request.base.ref }}
           metric: 'm0'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
   m1:
     name: M1 - Manejo de commits
     runs-on: ubuntu-latest
@@ -26,9 +26,9 @@ jobs:
         id: m1
         uses: j1myx/githubactionbase@main
         with:
-          origin_branch: ${{ github.event.pull_request.head.ref }}
           destination_branch: ${{ github.event.pull_request.base.ref }}
           metric: 'm1'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
   m2:
     name: M2 - Creación de PR
     runs-on: ubuntu-latest
@@ -38,9 +38,9 @@ jobs:
         id: m2
         uses: j1myx/githubactionbase@main
         with:
-          origin_branch: ${{ github.event.pull_request.head.ref }}
           destination_branch: ${{ github.event.pull_request.base.ref }}
           metric: 'm2'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
   m3:
     name: M3 - Revisión de Pull Request
     runs-on: ubuntu-latest
@@ -50,9 +50,9 @@ jobs:
         id: m3
         uses: j1myx/githubactionbase@main
         with:
-          origin_branch: ${{ github.event.pull_request.head.ref }}
           destination_branch: ${{ github.event.pull_request.base.ref }}
           metric: 'm3'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
   m4:
     name: M4 - Observación de Pull Request
     runs-on: ubuntu-latest
@@ -62,11 +62,11 @@ jobs:
         id: m4
         uses: j1myx/githubactionbase@main
         with:
-          origin_branch: ${{ github.event.pull_request.head.ref }}
           destination_branch: ${{ github.event.pull_request.base.ref }}
           metric: 'm4'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
   m5:
-    name: M5 - Observación de Pull Request
+    name: M5 - PR abierto por más de 7 días
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -74,6 +74,6 @@ jobs:
         id: m5
         uses: j1myx/githubactionbase@main
         with:
-          origin_branch: ${{ github.event.pull_request.head.ref }}
           destination_branch: ${{ github.event.pull_request.base.ref }}
           metric: 'm5'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
